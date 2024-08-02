@@ -1,0 +1,34 @@
+<!-- templates/jobs/job_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Détails de l'offre{% endblock %}
+
+{% block content %}
+<div class="row mt-4">
+    <div class="col-md-8">
+        <h1>{{ job.title }}</h1>
+        <p><strong>Description :</strong> {{ job.description }}</p>
+        <h4>Mission de Caplogy :</h4>
+        <p>{{ job.mission }}</p>
+        <h4>Contexte du poste :</h4>
+        <p>{{ job.context }}</p>
+        <h4>Responsabilités et missions :</h4>
+        <p>{{ job.responsibilities }}</p>
+        <h4>Qualifications :</h4>
+        <p>{{ job.qualifications }}</p>
+        <h4>Expérience souhaitée :</h4>
+        <p>{{ job.experience }}</p>
+        <h4>Qualités requises :</h4>
+        <p>{{ job.qualities }}</p>
+        <h4>Atouts supplémentaires :</h4>
+        <p>{{ job.extras }}</p>
+    </div>
+    <div class="col-md-4">
+        <h4>Organisme employeur</h4>
+        <p><strong>{{ job.employer_name }}</strong></p>
+        <p>Lieu : {{ job.location }}</p>
+        <p>Date de publication : {{ job.date_posted }}</p>
+        <a href="mailto:{{ job.contact_email }}" class="btn btn-primary">Postuler maintenant</a>
+    </div>
+</div>
+{% endblock %}
